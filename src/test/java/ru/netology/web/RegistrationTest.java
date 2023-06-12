@@ -51,7 +51,7 @@ class RegistrationTest {
         // Находим элемент "Телефон клиента", устанавливаем значение для дочернего input
         form.$("[data-test-id=phone] input").setValue(phoneUser);
         // Нажимаем чекбокс "Я соглашаюсь"
-        //form.$("[data-test-id=agreement]").click();
+        form.$("[data-test-id=agreement]").click();
         // Нажимаем кнопку "Забронировать"
         $$("button").find(exactText(submitButtonName)).click();
         // Ожидаем появление элемента с текстом "Успешно", что подтверждает правильность регистрации

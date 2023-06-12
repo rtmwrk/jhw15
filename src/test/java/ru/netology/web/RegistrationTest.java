@@ -30,7 +30,7 @@ class RegistrationTest {
         // Формируем значение поля "Фамилия и Имя клиента"
         String nameUser = "Иванов Петр";
         // Формируем значение поля "Телефон клиента"
-        String phoneUser = "+791812345678";
+        String phoneUser = "+79181234567";
         // Формируем имена кнопок и текстов сообщений для последующего анализа
         String submitButtonName = "Забронировать";
         String successWindow = "Успешно";
@@ -51,7 +51,7 @@ class RegistrationTest {
         // Находим элемент "Телефон клиента", устанавливаем значение для дочернего input
         form.$("[data-test-id=phone] input").setValue(phoneUser);
         // Нажимаем чекбокс "Я соглашаюсь"
-        form.$("[data-test-id=agreement]").click();
+        //form.$("[data-test-id=agreement]").click();
         // Нажимаем кнопку "Забронировать"
         $$("button").find(exactText(submitButtonName)).click();
         // Ожидаем появление элемента с текстом "Успешно", что подтверждает правильность регистрации

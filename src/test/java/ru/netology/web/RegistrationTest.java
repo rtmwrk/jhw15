@@ -28,9 +28,9 @@ class RegistrationTest {
         // Формируем значение поля "Дата" - по условию дата должна быть не раньше чем текущая + 3 дня
         String dateVisit = setupDate(4, "dd.MM.yyyy");
         // Формируем значение поля "Фамилия и Имя клиента"
-        String nameUser = "$%^Иванов Петр";
+        String nameUser = "Иванов Петр";
         // Формируем значение поля "Телефон клиента"
-        String phoneUser = "+79181234567";
+        String phoneUser = "+791812345678";
         // Формируем имена кнопок и текстов сообщений для последующего анализа
         String submitButtonName = "Забронировать";
         String successWindow = "Успешно";

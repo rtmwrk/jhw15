@@ -24,7 +24,7 @@ class RegistrationTest {
     void shouldRegisterDebetCard() {
         // Подготовим данные для работы с элементами формы заказа дебетовой карты
         // Формируем значения поля "Город"
-        String cityRegistration = "Краснодар";
+        String cityRegistration = "Краснодар!";
         // Формируем значение поля "Дата" - по условию дата должна быть не раньше чем текущая + 3 дня
         String dateVisit = setupDate(4, "dd.MM.yyyy");
         // Формируем значение поля "Фамилия и Имя клиента"

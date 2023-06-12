@@ -21,7 +21,7 @@ class RegistrationTest {
 
     // Проведем функциональное позитивное тестирование работы сервиса заказа дебетовой карты
     @Test
-    void shouldRegisterDebetCard() throws InterruptedException {
+    void shouldRegisterDebetCard() {
         // Подготовим данные для работы с элементами формы заказа дебетовой карты
         // Формируем значения поля "Город"
         String cityRegistration = "Краснодар";

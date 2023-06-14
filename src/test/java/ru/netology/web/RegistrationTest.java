@@ -33,7 +33,6 @@ class RegistrationTest {
         String phoneUser = "+79181234567";
         // Формируем имена кнопок и текстов сообщений для последующего анализа
         String submitButtonName = "Забронировать";
-        String successWindow = "Успешно";
 
         // Вызываем форму доставки карты
         open("http://localhost:9999");
@@ -54,8 +53,12 @@ class RegistrationTest {
         form.$("[data-test-id=agreement]").click();
         // Нажимаем кнопку "Забронировать"
         $$("button").find(exactText(submitButtonName)).click();
-        // Ожидаем появление элемента с текстом "Успешно", что подтверждает правильность регистрации
-        $(withText(successWindow)).shouldBe(visible, Duration.ofMillis(11000));
+        // Ожидаем появление элемента текста сообщения с датой встречи, что подтверждает
+        // успешность регистрации заявки на оформление деюетовой карты и позволяет проверить
+        // правильность даты встречи банковского сотрудника и клиента
+        $("[data-test-id=notification] .notification__content")
+                .shouldBe(visible, Duration.ofMillis(11000))
+                .shouldBe(exactText("Встреча успешно забронирована на " + dateVisit));
     }
 }
 
